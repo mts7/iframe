@@ -1,0 +1,7 @@
+function getIframeContents(selector) {
+    if (!selector || selector.length == 0) {
+        // return an empty string because there is no selector
+        return '';
+    }
+    return $($($(selector).contents()[0].body).contents().find('body').context).html();
+}
